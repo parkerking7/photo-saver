@@ -11,6 +11,7 @@ class PhotoForm extends Component {
             imgUrl: ''
         }
     }
+
      newPhoto (newState) {
         this.props.addPhoto(newState);
         this.setState (
@@ -23,10 +24,10 @@ class PhotoForm extends Component {
 render(){
         return(
             <form>
-                <input value = {this.state.title} onChange ={event => this.onTitleChange(event.target.value)} type="text" placeholder="Title..."/>
-                <input value = {this.state.description} onChange = {event => this.onDescriptionChange(event.target.value)} type="text" placeholder="Description..."/>
-                <input value = {this.state.imgUrl} onChange = {event => this.onImageURLChange(event.target.value)}  type="text" placeholder="Image URL..."/>
-                <button type='button' onClick = { () => this.newPhoto(this.state) } className="btn btn-default">Add Photo</button>
+                <input className="formBox col-sm-4 col-xs-12" value = {this.state.title} onChange ={event => this.onTitleChange(event.target.value)} type="text" placeholder="Title..."/>
+                <textarea className="descriptionBox formBox col-sm-4 col-xs-12" value = {this.state.description} onChange = {event => this.onDescriptionChange(event.target.value)} type="text" placeholder="Description..."/>
+                <input className="formBox col-sm-4 col-xs-12" value = {this.state.imgUrl} onChange = {event => this.onImageURLChange(event.target.value)}  type="text" placeholder="Image URL..."/>
+                <button type='button' onClick = { () => this.newPhoto(this.state) } className="btn btn-default submitBtn col-sm-offset-4 col-sm-4 col-xs-12">Add Photo</button>
             </form>
         )
 
@@ -34,15 +35,12 @@ render(){
 
     onTitleChange(title){
         this.setState({ title });
-        // this.props.onSearchTermChange(term);
     }
     onDescriptionChange(description){
         this.setState({ description });
-        // this.props.onSearchTermChange(term);
     }
     onImageURLChange(imgUrl){
         this.setState({ imgUrl });
-        // this.props.onSearchTermChange(term);
     }
 
 }

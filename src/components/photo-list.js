@@ -4,10 +4,12 @@ import PhotoListItem from './photo-list-item';
 
 const PhotoList = (props) => {
 
-    const photos = props.photos.map((photoItem) => {
+    const photos = props.photos.map((photoItem, i) => {
         return <PhotoListItem
         key = {photoItem._id}
+        place = {i}
         photoItem = {photoItem}
+        deletePhoto = {props.deletePhoto}
         />
 
     });

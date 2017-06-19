@@ -9,7 +9,10 @@ class App extends Component{
 
         this.state = {
             photos: [ ]
-        }
+        };
+
+        this.newPhoto = this.newPhoto.bind(this);
+        this.deletePhoto = this.deletePhoto.bind(this);
     }
 
         componentDidMount(){
@@ -20,26 +23,32 @@ class App extends Component{
                         })
         }
 
-        setPhotoState(){
-            console.log(this.state);
-        }
+
 
     newPhoto(photoInfo) {
         return axios.post('https://api.vschool.io/parker/todo', photoInfo)
             .then((response) => {
-            console.log(this)
-            // this.setState({
-            //     photos.push(newPhoto)
-            // })
+            let newPhoto = response.data;
+            let existingPhotos = this.state.photos;
+            existingPhotos.push(newPhoto);
+            this.setState({ });
         });
+    }
+    deletePhoto(id, position){
+            let allPhotos = this.state.photos;
+             allPhotos.splice(position.position, 1);
+            this.setState({photos: allPhotos});
+            return axios.delete('https://api.vschool.io/parker/todo/' + id.id)
+
     }
 
 
     render(){
         return(
             <div>
+                <h1 className="text-center">Photo Saver</h1>
                 <PhotoForm  addPhoto = {this.newPhoto}/>
-            <PhotoList photos = {this.state.photos}/>
+            <PhotoList deletePhoto = {this.deletePhoto} photos = {this.state.photos}/>
             </div>
     );
     }
