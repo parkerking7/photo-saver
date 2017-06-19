@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+import axios from 'axios';
+import PhotoForm from './components/photo-form';
 import PhotoList from './components/photo-list';
 class App extends Component{
     constructor(props){
@@ -9,18 +11,34 @@ class App extends Component{
             photos: [ ]
         }
     }
+
         componentDidMount(){
-        return $.getJSON("https://api.vschool.io/parker/todo")
-            .then((res) => {
-            const photos = res;
-            this.setState({photos});
-            })
+            return axios.get('https://api.vschool.io/parker/todo')
+                .then((response) => {
+                            const photos = response.data;
+                            this.setState({photos});
+                        })
         }
+
+        setPhotoState(){
+            console.log(this.state);
+        }
+
+    newPhoto(photoInfo) {
+        return axios.post('https://api.vschool.io/parker/todo', photoInfo)
+            .then((response) => {
+            console.log(this)
+            // this.setState({
+            //     photos.push(newPhoto)
+            // })
+        });
+    }
 
 
     render(){
         return(
             <div>
+                <PhotoForm  addPhoto = {this.newPhoto}/>
             <PhotoList photos = {this.state.photos}/>
             </div>
     );
