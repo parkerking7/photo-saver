@@ -12,8 +12,9 @@ const PhotoListItem = ( props ) => {
         <li className="col-xl-4 col-xs-12 col-md-6 photos">
             <div className="row">
             <h1 className="text-center photoTitle">{title}</h1>
-                <button type='button' onClick = { event => deletePhoto({id}, {position}) } className="btn btn-sm deleteBtn">X</button>
+                <button type='button' onClick = { event => deletePhoto(id, position) } className="btn btn-sm deleteBtn">X</button>
             <img className="main-photo" src={imageUrl} alt=""/>
+                <input className="star" type="checkbox" ></input>
             <div className="photo-description-box">
                 <p className="photo-description">{description}</p>
             </div>
