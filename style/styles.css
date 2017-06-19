@@ -1,0 +1,17 @@
+.photos{
+    list-style:none;
+}
+.main-photo{
+    width:100%;
+    height:200px;
+}
+.photoTitle{
+    text-align: center;
+}
+.photo-description-box{
+    height: 100px;
+    border: 1px solid black;
+}
+.photo-description{
+    margin:5px;
+}
