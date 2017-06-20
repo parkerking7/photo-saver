@@ -5,7 +5,7 @@ const NavBar = (props) =>{
         return (
             <div className="topnav" id="myTopnav">
                 <a href="#">Home</a>
-                <a href="#profile">Profile</a>
+                <a href="#favorites">Favorites</a>
 
             </div>
         )

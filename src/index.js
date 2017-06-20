@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import NavBar from './components/nav-bar';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import Home from './components/home/home';
-import Profile from'./components/profile/profile';
+import Favorites from'./components/favorites/favorites';
 class App extends Component{
     constructor(props) {
         super(props);
@@ -19,7 +19,7 @@ class App extends Component{
                 <Router>
                     <div>
                         <Route exact path="/" component={Home} />
-                        <Route path="/profile" component={Profile} />
+                        <Route path="/favorites" component={Favorites} />
                     </div>
                 </Router>
             </div>

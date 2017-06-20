@@ -13,6 +13,7 @@ class Home extends Component{
 
         this.newPhoto = this.newPhoto.bind(this);
         this.deletePhoto = this.deletePhoto.bind(this);
+        this.addStar = this.addStar.bind(this);
     }
 
     componentDidMount(){
@@ -41,6 +42,10 @@ class Home extends Component{
         return axios.delete('https://api.vschool.io/parker/todo/' + id)
 
     }
+    addStar(id, isChecked){
+        isChecked = !isChecked;
+        return axios.put('https://api.vschool.io/parker/todo/' + id, {"completed": isChecked});
+    }
 
 
     render(){
@@ -50,7 +55,7 @@ class Home extends Component{
                 <div className="container">
                     <h1 className="text-center">Photo Saver</h1>
                     <PhotoForm  addPhoto = {this.newPhoto}/>
-                    <PhotoList deletePhoto = {this.deletePhoto} photos = {this.state.photos}/>
+                    <PhotoList addStar = {this.addStar} deletePhoto = {this.deletePhoto} photos = {this.state.photos}/>
                 </div>
             </div>
         );

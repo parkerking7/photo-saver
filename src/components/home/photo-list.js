@@ -8,6 +8,7 @@ const PhotoList = (props) => {
         return <PhotoListItem
         key = {photoItem._id}
         place = {i}
+        addStar = {props.addStar}
         photoItem = {photoItem}
         deletePhoto = {props.deletePhoto}
         />
