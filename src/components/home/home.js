@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 import PhotoForm from './photo-form';
-import PhotoList from './photo-list';
+import PhotoList from '../photo-list';
 class Home extends Component{
     constructor(props){
         super(props);
 
         this.state = {
-            photos: [ ]
+            photos: [ ],
+            amount: 6
         };
 
         this.newPhoto = this.newPhoto.bind(this);
         this.deletePhoto = this.deletePhoto.bind(this);
         this.addStar = this.addStar.bind(this);
+        this.newAmount = this.newAmount.bind(this);
     }
 
     componentDidMount(){
@@ -47,7 +48,11 @@ class Home extends Component{
         return axios.put('https://api.vschool.io/parker/todo/' + id, {"completed": isChecked});
     }
 
-
+    newAmount(){
+        let amount = this.state.amount;
+        amount = amount + 6 ;
+        this.setState({amount})
+    }
     render(){
         return(
 
@@ -55,7 +60,7 @@ class Home extends Component{
                 <div className="container">
                     <h1 className="text-center">Photo Saver</h1>
                     <PhotoForm  addPhoto = {this.newPhoto}/>
-                    <PhotoList addStar = {this.addStar} deletePhoto = {this.deletePhoto} photos = {this.state.photos}/>
+                    <PhotoList amount = {this.state.amount} newAmount = {this.newAmount} addStar = {this.addStar} deletePhoto = {this.deletePhoto} photos = {this.state.photos}/>
                 </div>
             </div>
         );

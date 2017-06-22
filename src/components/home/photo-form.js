@@ -46,10 +46,5 @@ render(){
 }
 
 export default PhotoForm;
-//
-// this.onInputChange(event.target.value)} />
-// </div>
-// );
-// }
 
 

@@ -17,7 +17,7 @@ const PhotoListItem = ( props ) => {
             <h1 className="text-center photoTitle">{title}</h1>
                 <button type='button' onClick = { event => deletePhoto(id, position) } className="btn btn-sm deleteBtn">X</button>
             <img className="main-photo" src={imageUrl} alt=""/>
-                <input defaultChecked = {isChecked} className="star" type="checkbox" onClick = { event => addStar(id, isChecked)}></input>
+                <input defaultChecked = {isChecked} className="star" type="checkbox" onClick = { event => addStar(id, isChecked, position)}></input>
             <div className="photo-description-box">
                 <p className="photo-description">{description}</p>
             </div>

@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-const NavBar = (props) =>{
+const NavBar = () =>{
 
         return (
             <div className="topnav" id="myTopnav">
