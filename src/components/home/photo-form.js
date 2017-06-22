@@ -2,26 +2,25 @@ import React, {Component} from 'react';
 
 class PhotoForm extends Component {
 
-    constructor(props){
-        super(props);
+    constructor(props) {
+    	super(props);
 
-        this.state = {
-            title: '',
-            description: '',
-            imgUrl: ''
-        }
+    	this.state = {
+    		title: '',
+    		description: '',
+    		imgUrl: ''
+    	}
     }
 
-     newPhoto (newState) {
-        this.props.addPhoto(newState);
-        this.setState (
-            {
-                title: '',
-                description: '',
-                imgUrl: ''
-            });
+    newPhoto(newState) {
+    	this.props.addPhoto(newState);
+    	this.setState({
+    		title: '',
+    		description: '',
+    		imgUrl: ''
+    	});
     };
-render(){
+    render() {
         return(
             <form>
                 <input className="formBox col-sm-4 col-xs-12" value = {this.state.title} onChange ={event => this.onTitleChange(event.target.value)} type="text" placeholder="Title..."/>
@@ -33,16 +32,21 @@ render(){
 
 }
 
-    onTitleChange(title){
-        this.setState({ title });
+    onTitleChange(title) {
+    	this.setState({
+    		title
+    	});
     }
-    onDescriptionChange(description){
-        this.setState({ description });
+    onDescriptionChange(description) {
+    	this.setState({
+    		description
+    	});
     }
-    onImageURLChange(imgUrl){
-        this.setState({ imgUrl });
+    onImageURLChange(imgUrl) {
+    	this.setState({
+    		imgUrl
+    	});
     }
-
 }
 
 export default PhotoForm;

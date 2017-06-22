@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c363f66-0e95-4800-aabd-68ac45c99a38" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/home/photo-list-item.js" afterPath="$PROJECT_DIR$/src/components/photo-list-item.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/home/photo-list.js" afterPath="$PROJECT_DIR$/src/components/photo-list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/favorites/favorites.js" afterPath="$PROJECT_DIR$/src/components/favorites/favorites.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/home.js" afterPath="$PROJECT_DIR$/src/components/home/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/photo-form.js" afterPath="$PROJECT_DIR$/src/components/home/photo-form.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/nav-bar.js" afterPath="$PROJECT_DIR$/src/components/nav-bar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/styles.css" afterPath="$PROJECT_DIR$/style/styles.css" />
-    </list>
+    <list default="true" id="7c363f66-0e95-4800-aabd-68ac45c99a38" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -39,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+              <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -420,12 +410,12 @@
       <option name="presentableId" value="Default" />
       <updated>1497835554818</updated>
       <workItem from="1497835556027" duration="22279000" />
-      <workItem from="1497985775910" duration="9842000" />
+      <workItem from="1497985775910" duration="9920000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32121000" />
+    <option name="totallyTimeSpent" value="32199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="23" width="1239" height="1002" extended-state="0" />
@@ -683,7 +673,7 @@
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

@@ -11,7 +11,7 @@ const PhotoListItem = ( props ) => {
     const description = photoItem.description;
     const id = photoItem._id;
 
-    return(
+    return (
         <li className="col-xl-4 col-xs-12 col-md-6 photos">
             <div className="row">
             <h1 className="text-center photoTitle">{title}</h1>
