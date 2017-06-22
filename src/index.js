@@ -11,6 +11,7 @@ class App extends Component{
     }
 
 
+
     render(){
         return(
 
@@ -18,7 +19,7 @@ class App extends Component{
                 <NavBar />
                 <Router>
                     <div>
-                        <Route exact path="/" component={Home} />
+                        <Route exact path="/" component={Home}/>
                         <Route path="/favorites" component={Favorites} />
                     </div>
                 </Router>
